@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Table id="idPredecessorTable" items="{predecessor>/predecessor}" mode="SingleSelectLeft">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Predecessor" level="H2"/>
+				<ToolbarSpacer/>
+				<Button tooltip="Add predecessor" icon="sap-icon://add" press="handeCreateTaskAddPredecessor"/>
+				<Button tooltip="Delete predecessor" icon="sap-icon://sys-minus" press="handeCreateTaskDelPredecessor"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<header>
+					<Text text="Predecessor ID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="GUID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Project GUID"></Text>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Input value="{predecessor>Predid}" enabled="true"></Input>
+					<Input value="{predecessor>Guid}" enabled="false"></Input>
+					<Input value="{predecessor>Pguid}" enabled="false"></Input>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

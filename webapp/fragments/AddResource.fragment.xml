@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<Dialog title="Add Resource">
+		<content>
+			<f:SimpleForm>
+				<f:content>
+					<Label text="Resource ID"></Label>
+					<Input id="idResource" value="{AddResource>/Resrc}" enabled="true"></Input>
+					<Label text="GUID"></Label>
+					<Input id="idGuid" value="{AddResource>/Guid}" enabled="true"></Input>
+					<Label text="Unique GUID"></Label>
+					<Input id="idUGuid" value="{AddResource>/UniqueId}" enabled="true"></Input>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button text="OK" press="handleAddResourceOk"></Button>
+			<Button text="Cancel" press="handleAddResourceCancel"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:commons="sap.suite.ui.commons"
+	xmlns:l="sap.ui.layout">
+	<Panel>
+		<commons:Timeline id="idTimeline" enableDoubleSided="false" height="600px" enableScroll="true" groupBy="Ctstm" 
+		  growingThreshold="0" filterTitle="Comments"
+			sortOldestFirst="true" content="{CommentsNav}">
+			<commons:content>
+				<commons:TimelineItem dateTime="{Ctstm}" text="{Cmt}" userName="{Cuser}" ></commons:TimelineItem>
+			</commons:content>
+		</commons:Timeline>
+		<FeedInput id="idComments" placeholder="Post Your Comments Here!"
+			post="handleAddComments"/>
+	</Panel>
+</core:FragmentDefinition>

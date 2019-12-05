@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Table id="idResourcesTable" items="{TaskResources}" mode="SingleSelectLeft">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Resources" level="H2"/>
+				<ToolbarSpacer/>
+				<Button tooltip="Add Resources" icon="sap-icon://add" press="handeUpdateAddResources"/>
+				<Button tooltip="Delete Resources" icon="sap-icon://sys-minus" press="handeUpdateDelResources"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<header>
+					<Text text="Resource ID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="GUID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Unique ID"></Text>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Input value="{Resrc}" enabled="true"></Input>
+					<Input value="{Guid}" enabled="true"></Input>
+					<Input value="{UniqueId}" enabled="true"></Input>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

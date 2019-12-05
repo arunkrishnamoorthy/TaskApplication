@@ -1,0 +1,131 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	xmlns:f="sap.ui.layout.form">
+	<smartForm:SmartForm id="sfTaskDetails" app:defaultCheckBoxDisplayBehaviour="OnOff" app:defaultDropDownDisplayBehaviour="idAndDescription"
+		editable="true">
+		<smartForm:layout>
+			<smartForm:ColumnLayout columnsM="2" columnsL="2" columnsXL="2"/>
+		</smartForm:layout>
+		<smartForm:Group label="Task Details">
+			<!--<smartForm:GroupElement>-->
+			<!--	<smartField:SmartField id="idTask" value="{Tpmid}" showValueHelp="true"/>-->
+			<!--</smartForm:GroupElement>-->
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idProject" value="{Project}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idName" value="{Name}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idActive" value="{Active}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idType" value="{Type}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idPercentComplete" value="{PercentComplete}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idMilestone" value="{Milestone}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idTotalSlack" value="{TotalSlack}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idTaskCalendar" value="{TaskCalendar}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idDeadlineDt" value="{DeadlineDt}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idConstraintDate" value="{ConstraintDate}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idConstraintType" value="{ConstraintType}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+		</smartForm:Group>
+		<smartForm:Group label="Dates">
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idStartDate" value="{StartDate}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idFinishDate" value="{FinishDate}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idBaselineStart" value="{BlStart}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idBaselineFinish" value="{BlFinish}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="SchedStart" value="{SchedStart}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idSchedFinish" value="{SchedFinish}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idActualStart" value="{ActualStart}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idActualFinish" value="{ActualFinish}" showValueHelp="true">
+					<smartField:configuration>
+						<smartField:Configuration controlType="datePicker"/>
+					</smartField:configuration>
+				</smartField:SmartField>
+			</smartForm:GroupElement>
+		</smartForm:Group>
+		<smartForm:Group label="Durations">
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idTaskDuration" value="{Duration}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idBaselineDuration" value="{BlDuration}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idScheduledDuration" value="{ScheduledDuration}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idActualDuration" value="{ActualDuration}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+			<smartForm:GroupElement>
+				<smartField:SmartField id="idRemainingDuration" value="{RemainingDuration}" showValueHelp="true"/>
+			</smartForm:GroupElement>
+		</smartForm:Group>
+	</smartForm:SmartForm>
+</core:FragmentDefinition>

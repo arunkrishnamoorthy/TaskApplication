@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Table id="idCreateSprintTable" items="{sprints>/sprints}" mode="SingleSelectLeft">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Sprints" level="H2"/>
+				<ToolbarSpacer/>
+				<Button tooltip="Add Sprint" icon="sap-icon://add" press="handleSprintCreate"/>
+				<Button tooltip="Delete Sprint" icon="sap-icon://sys-minus" press="handleSprintDelete"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<header>
+					<Text text="Sprint ID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Start Date"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Finish Date"></Text>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Input value="{sprints>Sprint}" enabled="true"></Input>
+					<DatePicker dateValue="{sprints>StartDate}"></DatePicker>
+					<DatePicker dateValue="{sprints>FinishDate}"></DatePicker>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

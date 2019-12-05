@@ -1,0 +1,51 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Table id="idChangeHistoryTable" items="{history>/history}" mode="SingleSelectLeft">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="History" level="H2"/>
+				<ToolbarSpacer/>
+				<Button tooltip="Add History" icon="sap-icon://add" press="handeAddHistory"/>
+				<Button tooltip="Delete History" icon="sap-icon://sys-minus" press="handeDelHistory"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<header>
+					<Text text="User Name"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Change ID"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Field Name"></Text>
+				</header>
+			</Column>
+			<Column>
+				<header>
+					<Text text="Old Value"></Text>
+				</header> 
+			</Column>
+				<Column>
+				<header>
+					<Text text="New Value"></Text>
+				</header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Input value="{history>Username}" enabled="true"></Input>
+					<Input value="{history>Chngind}" enabled="true"></Input>
+					<Input value="{history>Fname}" enabled="true"></Input>
+					<Input value="{history>FOld}" enabled="true"></Input>
+					<Input value="{history>FNew}" enabled="true"></Input>
+					
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>

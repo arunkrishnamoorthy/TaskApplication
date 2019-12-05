@@ -1,0 +1,74 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui.demo.Tasks.controller.CreateTask"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:suite="sap.suite.ui.commons">
+	<App>
+		<pages>
+			<Page title="Create Task">
+				<content>
+					<uxap:ObjectPageLayout id="idDocumentCreate" enableLazyLoading="false" showTitleInHeaderContent="true" useIconTabBar="false">
+						<uxap:headerTitle>
+							<uxap:ObjectPageDynamicHeaderTitle>
+								<uxap:actions>
+									<Button type="Emphasized" text="Create" press="handleCreate" icon="sap-icon://save" tooltip="CreateDocument"/>
+								</uxap:actions>
+							</uxap:ObjectPageDynamicHeaderTitle>
+						</uxap:headerTitle>
+						<!--Section: TaskDetails-->
+						<uxap:sections>
+							<uxap:ObjectPageSection id="idTaskDetails" title="Task Details">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="idDetailsSection" title="Task">
+										<uxap:blocks></uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							<!--Section: ResourceDetails-->
+							<uxap:ObjectPageSection id="idResourceDetails" title="ResourceDetails">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="idResourceSection" title="Resource">
+										<uxap:blocks></uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							<!--Section: PredecessorDetails-->
+							<uxap:ObjectPageSection id="idPredecessorDetails" title="PredecessorDetails">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="idPredecessorSection" title="Predecessor">
+										<uxap:blocks></uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							
+							<!--<uxap:ObjectPageSection id="idSprintsDetails" title="SprintsDetails">-->
+							<!--	<uxap:subSections>-->
+							<!--		<uxap:ObjectPageSubSection id="idSprintsSection" title="Sprints">-->
+							<!--			<uxap:blocks></uxap:blocks>-->
+							<!--		</uxap:ObjectPageSubSection>-->
+							<!--	</uxap:subSections>-->
+							<!--</uxap:ObjectPageSection>-->
+							
+							<!--Section: CommentsDetails-->
+							<uxap:ObjectPageSection id="idCommentsDetails" title="CommentsDetails">
+								<uxap:subSections>
+									<uxap:ObjectPageSubSection id="idCommentsSection" title="Comments">
+										<uxap:blocks></uxap:blocks>
+									</uxap:ObjectPageSubSection>
+								</uxap:subSections>
+							</uxap:ObjectPageSection>
+							
+							<!--Section: Change HistoryDetails-->
+							<!--	<uxap:ObjectPageSection id = "idHistoryDetails" title = "ChangeHistoryDetails">-->
+							<!--	<uxap:subSections>-->
+							<!--		<uxap:ObjectPageSubSection id = "idHistorySection" title = "ChangeHistory">-->
+							<!--			<uxap:blocks></uxap:blocks>-->
+							<!--		</uxap:ObjectPageSubSection>-->
+							<!--	</uxap:subSections>-->
+							<!--</uxap:ObjectPageSection>-->
+							<!--Section: SprintsDetails-->
+							
+						</uxap:sections>
+					</uxap:ObjectPageLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

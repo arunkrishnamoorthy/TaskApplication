@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ui.demo.Tasks.controller.Project"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable">
+	<App>
+		<pages>
+			<Page title="Tasks">
+				<content>
+					<smartFilterBar:SmartFilterBar id="idSmartFilter" entitySet="TaskSet" search="handleSearch" showFilterConfiguration="true">
+						<smartFilterBar:controlConfiguration>
+							<smartFilterBar:ControlConfiguration key="Project" label="Project"/>
+							<smartFilterBar:ControlConfiguration key="Team" label="Team"/>
+						</smartFilterBar:controlConfiguration>
+						<smartFilterBar:layoutData>
+							<FlexItemData shrinkFactor="0"/>
+						</smartFilterBar:layoutData>
+					</smartFilterBar:SmartFilterBar>
+					<smartTable:SmartTable id="SmartTable" entitySet="TaskSet" smartFilterId="idSmartFilter" showRowCount="true" tableType="ResponsiveTable"
+						useExportToExcel="true" useVariantManagement="false" useTablePersonalisation="true" header="TasksDocument" 
+						requestAtLeastFields="Project,Tpmid">
+						<smartTable:customToolbar>
+							<OverflowToolbar design="Transparent">
+								<ToolbarSpacer/>
+								<!--<Button text="CreateTask" icon="sap-icon://create" press="handleCreateTask"/>-->
+								<!--<Button text="UpdateTask" icon="sap-icon://display" press="handleUpdateTask"/>-->
+								<!--<Button text="DeleteTask" icon="sap-icon://delete" press="handleDeleteTask"/>-->
+							</OverflowToolbar>
+						</smartTable:customToolbar>
+						<Table sticky="ColumnHeaders,HeaderToolbar" mode="SingleSelectLeft" includeItemInSelection="true">
+							<columns>
+								<Column id="idProject" width="100px" hAlign="Begin">
+									<Text text="Project"/>
+								</Column>
+								<Column id="idTpmId" width="100px" hAlign="Begin">
+									<Text text="Task ID"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Link text="{Project}" press="handleDisplayProject"/>
+										<Link text="{Tpmid}" press="handleUpdateTask"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<smartTable:layoutData>
+							<FlexItemData growFactor="1" baseSize="0%"/>
+						</smartTable:layoutData>
+					</smartTable:SmartTable>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<Dialog title="Add Predecessor">
+		<content>
+			<f:SimpleForm>
+				<f:content>
+					<Label text="Predecessor ID"></Label>
+					<Input id="idPredecessor" value="{AddPredecessor>/Predid}" enabled="true"></Input>
+					<Label text="GUID"></Label>
+					<Input id="idGuid" value="{AddPredecessor>/Guid}" enabled="false"></Input>
+					<Label text="PGUID"></Label>
+					<Input id="idPGuid" value="{AddPredecessor>/Pguid}" enabled="false"></Input>
+					<Label text="Unique GUID"></Label>
+					<Input id="idUGuid" value="{AddPredecessor>/UniqueId}" enabled="false"></Input>
+					<Label text="PUnique GUID"></Label>
+					<Input id="idPuniqueId" value="{AddPredecessor>/PuniqueId}" enabled="false"></Input>
+				</f:content>
+			</f:SimpleForm>
+		</content>
+		<buttons>
+			<Button text="OK" press="handleAddPredecessorOk"></Button>
+			<Button text="Cancel" press="handleAddPredecessorCancel"></Button>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>
